@@ -5,17 +5,20 @@ namespace RabbitMQ_WEbComparative.Controllers
 {
     public class RabbitMQController : Controller
     {
-        public IActionResult Index()
+        private RabbitMQViewModel _rabbitmqViewModel;
+        public RabbitMQController()
         {
-            RabbitMQViewModel rabbitMQViewModel = new RabbitMQViewModel();
-            return View(rabbitMQViewModel);
+            _rabbitmqViewModel = new RabbitMQViewModel();
+        }
+        public IActionResult Index()
+        { 
+            return View(_rabbitmqViewModel);
         }
 
         public IActionResult Tester()
         {
-            RabbitMQViewModel rabbitMQViewModel = new RabbitMQViewModel();
-            rabbitMQViewModel.Valid = true;
-            return View("Index",rabbitMQViewModel);
+            _rabbitmqViewModel.SendMessageQueue();
+            return View("Index", _rabbitmqViewModel);
         }
     }
 }

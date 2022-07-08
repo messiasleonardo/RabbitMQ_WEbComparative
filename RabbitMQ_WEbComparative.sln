@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Send", "Send\Send.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receive", "Receive\Receive.csproj", "{093AACE9-2EC4-4B44-A19A-E02CCA3C4A9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Send", "Service.Send\Service.Send.csproj", "{DAABF4F0-015E-40E2-85CE-0701129823F5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{093AACE9-2EC4-4B44-A19A-E02CCA3C4A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{093AACE9-2EC4-4B44-A19A-E02CCA3C4A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{093AACE9-2EC4-4B44-A19A-E02CCA3C4A9C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DAABF4F0-015E-40E2-85CE-0701129823F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAABF4F0-015E-40E2-85CE-0701129823F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAABF4F0-015E-40E2-85CE-0701129823F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAABF4F0-015E-40E2-85CE-0701129823F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
