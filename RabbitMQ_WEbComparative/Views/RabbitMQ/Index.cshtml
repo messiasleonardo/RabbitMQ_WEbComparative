@@ -1,0 +1,33 @@
+﻿@model RabbitMQ_WEbComparative.Models.RabbitMQViewModel
+@{
+    ViewData["Title"] = "With RabbitMQ";
+}
+<form asp-action="Tester">
+    <div class="text-center">
+        <h1>WithRabbitMQ</h1>
+        <div>
+            <label>While running, try to type in the box below:</label><br />
+            <textarea></textarea>
+        </div>
+        <div>
+            <label>Click the buttom to execute</label><br />
+            <button>Execute</button>
+        </div>
+    </div>
+</form>
+<table>
+    <thead>
+        <tr class="table100-head">
+            <th class="column1">FirstName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model.CustomerName)
+        {
+            <tr>
+                <td class="column1">@item</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
