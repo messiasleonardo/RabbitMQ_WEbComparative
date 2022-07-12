@@ -1,4 +1,5 @@
 ﻿using RabbitMQ.Client;
+using RabbitMQ_WEbComparative.Controllers;
 
 namespace RabbitMQ_WEbComparative.Models
 {
@@ -13,11 +14,13 @@ namespace RabbitMQ_WEbComparative.Models
 
         public void ConvertList(string names)
         {
+            RabbitMQController controller = new RabbitMQController();
+            List<string> values = new List<string>();
             for (int i = 0; i < names.Length; i++)
             {
-                CustomerName.Add(names[i].ToString());
+                values.Add(names[i].ToString());
             }
-
+            controller.ReturnView(values);
         }
         public void SendMessageQueue()
         {

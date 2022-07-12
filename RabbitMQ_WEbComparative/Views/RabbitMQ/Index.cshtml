@@ -15,19 +15,5 @@
         </div>
     </div>
 </form>
-<table>
-    <thead>
-        <tr class="table100-head">
-            <th class="column1">FirstName</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in @Model.CustomerName)
-        {
-            <tr>
-                <td class="column1">@item</td>
-            </tr>
-        }
 
-    </tbody>
-</table>
+@await Html.PartialAsync("Table")

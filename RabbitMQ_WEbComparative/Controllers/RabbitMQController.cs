@@ -11,7 +11,7 @@ namespace RabbitMQ_WEbComparative.Controllers
             _rabbitmqViewModel = new RabbitMQViewModel();
         }
         public IActionResult Index()
-        { 
+        {
             return View(_rabbitmqViewModel);
         }
 
@@ -19,6 +19,12 @@ namespace RabbitMQ_WEbComparative.Controllers
         {
             _rabbitmqViewModel.SendMessageQueue();
             return View("Index", _rabbitmqViewModel);
+        }
+
+        public IActionResult ReturnView(List<string> names)
+        {
+            _rabbitmqViewModel.CustomerName = names;
+            return PartialView("Table",_rabbitmqViewModel);
         }
     }
 }
