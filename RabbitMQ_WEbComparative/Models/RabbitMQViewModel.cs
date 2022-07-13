@@ -14,13 +14,13 @@ namespace RabbitMQ_WEbComparative.Models
 
         public void ConvertList(string names)
         {
-            RabbitMQController controller = new RabbitMQController();
+            TableController controller = new TableController();
             List<string> values = new List<string>();
             for (int i = 0; i < names.Length; i++)
             {
                 values.Add(names[i].ToString());
             }
-            controller.ReturnView(values);
+            controller.View(values);
         }
         public void SendMessageQueue()
         {

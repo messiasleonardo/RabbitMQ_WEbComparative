@@ -26,8 +26,8 @@ using (var channel = connection.CreateModel())
         properties.Persistent = true;
         Console.WriteLine(" [x] Received {0}", message);
 
-        RabbitMQViewModel rabbit = new RabbitMQViewModel();
-        rabbit.ConvertList(message);
+        //RabbitMQViewModel rabbit = new RabbitMQViewModel();
+        //rabbit.ConvertList(message);
     };
     channel.BasicConsume(queue: "ListNames",
                          autoAck: true,
